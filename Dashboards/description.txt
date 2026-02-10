@@ -1,1 +1,91 @@
+1. Introduction
+1.1 Présentation d’Olist
+Olist est une plateforme brésilienne de e-commerce qui opère sous la forme d’une marketplace, reliant des petites et moyennes entreprises (PME) à des millions de clients à travers l’ensemble du territoire brésilien. Elle permet aux vendeurs de référencer leurs produits sur plusieurs canaux de vente via un contrat unique, tout en s’appuyant sur des partenaires logistiques pour assurer la livraison des commandes.
+Le modèle économique d’Olist repose sur la centralisation des principales opérations du e-commerce, notamment la gestion des commandes, des paiements, de la logistique, de la relation client et de la collecte des avis. À l’issue de chaque achat, les clients sont invités à évaluer leur expérience, générant ainsi des données précieuses sur la satisfaction client, la qualité des produits et l’efficacité des livraisons.
+Entre 2016 et 2018, période couverte par le dataset étudié, Olist a enregistré près de 100 000 commandes, offrant une vision riche et représentative de l’activité e-commerce à grande échelle. Ces données permettent d’analyser la performance selon plusieurs dimensions complémentaires : financière, comportementale, logistique, géographique et qualitative.
+Malgré des baisses ponctuelles observées sur certaines périodes, Olist a su maintenir une dynamique de croissance, notamment grâce à des événements commerciaux majeurs tels que l’Independence Day, Halloween, Thanksgiving et Noël. Les perspectives de performance de la plateforme demeurent positives, soutenues par une stratégie axée sur le ciblage des segments clients à fort potentiel, la promotion de catégories porteuses (bien-être, beauté, informatique, cadeaux) et l’optimisation continue de l’expérience client.
+1.2 Problématique et enjeux business
+Dans un environnement e-commerce fortement concurrentiel, Olist doit répondre à plusieurs enjeux stratégiques majeurs :
+•	Piloter efficacement sa performance commerciale et financière ;
+•	Comprendre les éléments de satisfaction et d’insatisfaction des clients tout au long de leur expérience d’achat ;
+•	Améliorer l’efficacité logistique et réduire les retards de livraison ;
+•	Évaluer la performance des vendeurs présents sur la plateforme ;
+La problématique centrale de ce projet peut ainsi être formulée comme suit : Comment exploiter les données e-commerce d’Olist afin de transformer l’activité opérationnelle en leviers de décision stratégique et prédictive ?
+1.3 Démarche et travaux réalisés
+
+Afin de répondre à la problématique définie, le projet a été structuré en plusieurs étapes complémentaires, couvrant l’ensemble du cycle de vie de la donnée, depuis son intégration jusqu’à son exploitation analytique.
+1.3.1 Structuration et modélisation des données
+Les données brutes issues du dataset public Olist ont été intégrées au sein d’une base de données relationnelle (Snowflake / SQL). Cette phase fondamentale a consisté à :
+•	Importer l’ensemble des tables composant le jeu de données (clients, commandes, produits, paiements, livraisons, avis) ;
+•	Définir les clés primaires et les clés étrangères afin d’assurer l’intégrité référentielle ;
+•	Établir les relations entre les différentes tables du modèle relationnel ;
+•	Réaliser des jointures SQL et créer des vues analytiques destinées à faciliter l’exploration, l’analyse et l’exploitation des données.
+1.3.2 Nettoyage et préparation des données
+Un travail approfondi de nettoyage des données (data cleaning) a été mené afin de garantir la cohérence métier ainsi que la fiabilité des analyses. Les valeurs manquantes ont été analysées et interprétées en fonction du cycle de vie des commandes et des produits, en privilégiant des choix fondés sur la logique métier plutôt que sur des imputations artificielles susceptibles de biaiser les résultats.
+1.3.3 Analyse exploratoire et KPIs
+Une analyse exploratoire des données a été conduite, accompagnée de la définition et du calcul d’indicateurs clés de performance (Key Performance Indicator – KPIs), permettant d’évaluer :
+•	La performance financière (chiffre d’affaires, panier moyen) ;
+•	Le comportement client (fidélisation, segmentation) ;
+•	La performance des produits et des catégories ;
+•	L’efficacité logistique (délais de livraison, retards, coûts associés) ;
+•	La satisfaction client à travers l’analyse des avis et des notations.
+1.3.4 Visualisation et dashboards
+Les résultats issus des analyses ont été valorisés au moyen de dashboards interactifs développés sous Power BI, offrant une lecture synthétique et dynamique des performances. Ces tableaux de bord intègrent des filtres par période, région, et catégorie de produits, facilitant ainsi l’aide à la décision et l’exploration des données.
+
+1.3.5 Machine Learning et approche prédictive
+Une dimension Machine Learning a été intégrée au projet afin de dépasser l’analyse purement descriptive et d’introduire une approche prédictive orientée décision. Plusieurs cas d’usage ont été développés, notamment :
+•	La segmentation des clients afin d’identifier des profils de consommation homogènes;
+•	L’analyse et la prédiction de la satisfaction client à partir des avis textuels, à l’aide de techniques de Natural Language Processing (NLP) ;
+•	La prédiction des délais de livraison, dans l’objectif d’anticiper les retards et d’améliorer la performance logistique.
+Concernant l’analyse des avis clients, plusieurs algorithmes de classification ont été entraînés et comparés, parmi lesquels Random Forest, Logistic Regression, Linear SVC, XGBoost et AdaBoost. Cette démarche comparative a permis d’identifier les modèles les plus performants pour prédire le niveau de satisfaction client et mettre en évidence les principaux facteurs d’insatisfaction.
+1.3.6 Restitution et recommandations
+L’ensemble des résultats analytiques et prédictifs a été consolidé au sein d’une plateforme web dédiée, combinant dashboards interactifs, sorties des modèles de Machine Learning et recommandations métier.
+Cette restitution a pour objectif de faciliter la prise de décision stratégique et d’orienter les actions opérationnelles à travers plusieurs axes d’amélioration, notamment :
+•	L’optimisation des stratégies marketing sur les zones à fort potentiel, en particulier São Paulo ;
+•	L’amélioration de la performance logistique via la réduction des délais de livraison et la diversification des modes de transport ;
+•	La mise en place de programmes de fidélisation et de promotions saisonnières ciblées;
+•	L’optimisation de la stratégie de pricing.
+2. Contexte et définition du problème
+Le secteur du e-commerce génère un volume considérable de données liées aux ventes, aux clients, aux produits, à la logistique et à la satisfaction client. Toutefois, ces données restent fréquemment sous-exploitées, ce qui limite la capacité des entreprises à :
+•	Piloter efficacement leur performance commerciale et financière ;
+•	Comprendre finement le comportement et les attentes réelles des clients ;
+•	Améliorer la qualité de service, la satisfaction et la fidélisation.
+
+
+Dans le cas étudié, Olist, plateforme brésilienne de e-commerce opérant sous la forme d’une marketplace, dispose de données riches mais hétérogènes, issues de multiples processus métiers (commandes, paiements, livraisons, avis clients). Cependant, l’entreprise ne bénéficie pas d’un outil analytique centralisé permettant de transformer ces données brutes en indicateurs clés de performance (KPIs) et en analyses prédictives exploitables.
+La problématique principale réside ainsi dans l’absence d’une solution analytique intégrée, fiable et orientée décision, capable de fournir une vision globale et actionnable de la performance de l’activité e-commerce, tout en soutenant les décisions stratégiques et opérationnelles.
+3. Objectifs du projet
+3.1 Objectif général
+Concevoir et mettre en œuvre une solution complète de data Analytics et de Machine Learning visant à analyser, visualiser et prédire la performance d’une activité e-commerce, à partir d’un dataset réel issu de la plateforme Olist.
+3.2 Objectifs spécifiques
+Les objectifs spécifiques du projet sont les suivants :
+•	Structurer et centraliser les données e-commerce au sein d’une base de données relationnelle SQL ;
+•	Nettoyer, transformer et enrichir les données afin d’en garantir la qualité, la fiabilité et la cohérence métier ;
+•	Définir et calculer des KPIs couvrant les dimensions financière, client, produit, logistique et satisfaction ;
+•	Concevoir des dashboards interactifs sous Power BI pour faciliter l’aide à la décision ;
+•	Développer des modèles de Machine Learning dédiés à la segmentation client, à l’analyse de la satisfaction et à des approches prédictives orientées performance ;
+•	Valoriser les résultats à travers une plateforme web intégrée, combinant visualisations, résultats analytiques et recommandations métier.
+4. Périmètre du projet
+Inclus
+Le périmètre du projet couvre les aspects suivants :
+•	Exploitation du dataset e-commerce brésilien Olist, incluant les données de commandes, clients, produits, paiements, avis et livraisons ;
+•	Création et structuration d’une base de données relationnelle (SQL / Snowflake) ;
+
+•	Réalisation d’analyses descriptives et exploratoires ;
+•	Définition et calcul des KPIs e-commerce ;
+•	Développement de modèles de Machine Learning à des fins analytiques et prédictives;
+•	Conception de dashboards interactifs sous Power BI ;
+•	Intégration et restitution des résultats au sein d’un site web dédié.
+Hors périmètre
+Les éléments suivants ne sont pas inclus dans le périmètre du projet :
+•	Le déploiement de la solution en production à grande échelle ;
+•	La gestion des paiements en temps réel ;
+•	La connexion à des flux de données temps réel (streaming).
+5. Architecture et méthodologie de travail
+5.1 Modélisation des données (Snowflake / SQL)
+La première étape du projet a consisté à importer l’ensemble des tables du dataset Olist au sein d’un data Warehouse Snowflake. Une attention particulière a été portée aux aspects suivants :
+•	La définition des clés primaires pour chaque table ;
+•	La mise en place des clés étrangères afin de garantir l’intégrité référentielle ;
+•	La modélisation des relations entre les différentes entités métiers (customers, orders, order_items, products, payments, reviews, delivery).
+Des jointures SQL ont été réalisées afin de répondre aux besoins analytiques, et plusieurs vues SQL ont été créées pour simplifier et optimiser l’exploitation des données dans les outils de visualisation et d’analyse.
 
