@@ -68,5 +68,3 @@ The goal of this project is to transform raw data into **actionable insights** t
 
 ---
 
-
-*Repository prepared as a professional portfolio project for Data Analytics / Data Science positions.*
